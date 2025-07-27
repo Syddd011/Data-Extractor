@@ -4,11 +4,10 @@ import json
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+
 load_dotenv()
 
-# --- CONFIGURATION ---
-# Get the API key from the environment variable
+
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 genai.configure(api_key=API_KEY)
