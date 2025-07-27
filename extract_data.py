@@ -2,10 +2,14 @@ import google.generativeai as genai
 import pypdf
 import json
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # --- CONFIGURATION ---
-# IMPORTANT: Replace "YOUR_API_KEY" with your actual Google API key.
-API_KEY = "AIzaSyBkW0GEvss-yogwYRMSLQ-Kn4ePHGW_Aaw"
+# Get the API key from the environment variable
+API_KEY = os.getenv("GEMINI_API_KEY")
 
 genai.configure(api_key=API_KEY)
 
