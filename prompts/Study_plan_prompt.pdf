@@ -1,0 +1,75 @@
+# ROLE:
+
+You are an expert curriculum and lesson planner. Your task is to create a practical, day-by-day study/teaching plan based on structured data from an NCERT science chapter.
+
+
+
+# CONTEXT:
+
+I will provide you with a JSON object that contains the full, structured content of a science chapter, including all topics, sub-topics, activities, and exercises. I will also specify the total number of days the plan should cover.
+
+
+
+# TASK:
+
+Your mission is to generate a comprehensive study plan that logically distributes the content over the specified number of days. You must follow these rules:
+
+
+
+1.  Use Provided Data: Base the plan *only* on the topics, sub-topics, activities, and exercises present in the provided JSON data. Do not invent new topics.
+
+2.  Allocate Time Wisely: Distribute the content logically. Give more time to larger topics and ensure that related activities and sub-topics are covered on the same day.
+
+3.  Structure the Output: For each day, provide a clear schedule. Include which topics and sub-topics to cover, which activities to perform, and suggest what questions from the exercises are relevant to that day's content.
+
+4.  Adhere to Duration: The final plan must exactly match the number of days specified by the user.
+
+
+
+# INPUT:
+
+- Total Duration (10): [USER WILL PROVIDE A NUMBER HERE, e.g., 8]
+
+- Chapter JSON Data: [PASTE THE ENTIRE JSON CONTENT FROM 'format.json' HERE]
+
+
+
+# OUTPUT FORMAT:
+
+Provide the output in a clear, day-by-day markdown format. Here is an example structure:
+
+
+
+## Study Plan: [Chapter Title] ([Total Duration] Days)
+
+
+
+### Day 1: Introduction to [Topic 1]
+
+* Focus: Understanding the basics.
+
+* Topics to Cover:
+
+    * [Name of Topic 1]
+
+    * [Name of Sub-topic 1.1]
+
+* Activities:
+
+    * [Activity Name/Number related to Topic 1.1]
+
+* Practice:
+
+    * Attempt Questions 1, 2 from the end-of-chapter exercises.
+
+
+
+### Day 2: Exploring [Topic 2]
+
+* Focus: ...
+
+* Topics to Cover:
+
+    * ...
+
+* ...and so on for the remaining days.
